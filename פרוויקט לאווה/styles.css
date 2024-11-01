@@ -1,0 +1,189 @@
+@font-face {
+    font-family:GveretLevin;
+    src: url(fonts/GveretLevinAlefAlefAlef-Regular.otf);
+}
+@font-face {
+    font-family:ValeraRound;
+    src: url(fonts/VarelaRound-Regular.ttf);
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family:ValeraRound;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    background-image: url("images/background.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    font-family: GveretLevin;
+    text-align: center;
+    padding: 50px 0;
+}
+
+#tagline{
+    font-family: ValeraRound;
+}
+
+h2{
+    font-family: GveretLevin;
+}
+
+header h1 {
+    font-size: 2.5em;
+    color: #333;
+}
+
+header p {
+    font-size: 1.2em;
+    color: #666;
+}
+
+section {
+    text-align: center;
+    max-width: 500px;
+}
+
+section h2 {
+    font-size: 1.8em;
+    margin: 5% 0%;
+}
+
+#about p, #services ul, #contact p {
+    font-size: 1.1em;
+    color: #555;
+}
+#contact {
+    text-align: center;
+}
+#services ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+#services ul li {
+    padding: 10px 0;
+}
+#services ul li::before {
+    color: #007bff;
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+}
+
+#services ul li:hover {
+    color: #007bff;
+    cursor: pointer;
+}
+
+
+footer {
+    text-align: center;
+    background-color: #333;
+    color: white;
+    font-size: 0.9em;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+#popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+}
+
+#popup-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    width: 300px;
+    margin: 100px auto;
+    text-align: center;
+}
+
+#popup-title {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+#popup-text {
+    font-size: 1.2em;
+}
+
+#popup-close {
+    float: right;
+    font-size: 1.5em;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+}
+#popup-close:hover {
+    color: red;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .container {
+        max-width: 100%;
+        padding: 15px;
+    }
+    
+    header h1 {
+        font-size: 2em;
+    }
+
+    header p, #about p, #services ul, #contact p {
+        font-size: 1em;
+    }
+
+    section h2 {
+        font-size: 1.5em;
+    }
+
+    footer {
+        font-size: 0.8em;
+    }
+
+    #popup-content {
+        width: 80%;
+        margin: 50px auto;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.8em;
+    }
+
+    section h2 {
+        font-size: 1.3em;
+    }
+
+    header, #contact, section {
+        text-align: center;
+    }
+
+    #popup-content {
+        width: 90%;
+    }
+}
