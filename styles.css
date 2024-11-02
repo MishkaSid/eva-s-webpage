@@ -20,12 +20,31 @@ body {
     background-image: url("images/background.png");
     background-repeat: no-repeat;
     background-size: cover;
+    animation: change 30s infinite ease-in-out;
 }
-
+@keyframes change {
+    0% {
+        background-image: url("images/background.png");
+    }
+    25% {
+        background-image: url("images/background-2.png");
+    }
+    50% {
+        background-image: url("images/background-3.png");
+    }
+    75% {
+        background-image: url("images/background-4.png");
+    }
+    100% {
+        background-image: url("images/background.png");
+    }
+}
 .container {
     max-width: 1000px;
     margin: 0 auto;
     padding: 20px;
+    background-color: rgb(245, 245, 220,0.3);
+
 }
 
 header {
@@ -70,12 +89,13 @@ section h2 {
     text-align: center;
 }
 #services ul {
+    align-items: center;
     list-style-type: none;
     padding-left: 0;
 }
 
 #services ul li {
-    padding: 10px 0;
+    padding: 10px 20px;
 }
 #services ul li::before {
     color: #007bff;
