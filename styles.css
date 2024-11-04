@@ -33,7 +33,7 @@ body {
     background-image: url("images/background.png");
     background-repeat: no-repeat;
     background-size: cover;
-    animation: change 15s infinite ease-in-out;
+    animation: change 20s infinite ease-in-out;
 }
 
 @keyframes change {
@@ -76,6 +76,8 @@ header p {
 }
 
 h2 {
+    display: flex;
+    justify-content: center;
     font-family: GveretLevin;
 }
 
@@ -100,6 +102,10 @@ section h2 {
 
 /* Contact section styles */
 #contact {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
     text-align: center;
 }
 
@@ -189,6 +195,12 @@ footer {
 #popup-close:hover {
     color: red;
 }
+
+img {
+    width: 50px;
+    height: 50px;
+}
+
 
 /* Responsive Styles */
 @media (max-width: 1024px) {
