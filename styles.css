@@ -241,7 +241,6 @@ footer {
     }
 
     #services ul li {
-        width: 100%; /* Full width buttons for small screens */
         text-align: center;
     }
 
