@@ -1,19 +1,12 @@
 `use strict`
 
-addEventListener(`click`, (event) => {
-    if (event.target.matches(`#service`)) 
-        {
-        insert(event.target)
-        popup()
-        }
-})
-
-addEventListener(`click`, (event) => {
+document.addEventListener(`click`, (event) => {
     if (event.target.matches(`#popup`||`#popup-close`)) 
         {
         popup()
         }
 })
+
 function popup()
 {
     let popup = document.getElementById(`popup`)
@@ -41,4 +34,6 @@ function insert(service)
     text.innerHTML = `מטרת העיסוי המשולב היא לספק טיפול מותאם אישית, המשלב הרפיה עם שחרור מתחים ונקודות כאב. לדוגמה, ניתן להתחיל עם עיסוי שוודי לרגיעה כללית, ואז לעבור לטכניקות של רקמות עמוקות באזורים בהם השרירים תפוסים או כואבים. 
 יתרון העיסוי המשולב הוא בגמישות שלו – הוא מתאים למגוון רחב של צרכים, בין אם מדובר בהפגת מתחים, שיפור זרימת הדם, שחרור שרירים תפוסים, או אפילו חווית רגיעה עמוקה.`
     }
+
+    popup()
 }
